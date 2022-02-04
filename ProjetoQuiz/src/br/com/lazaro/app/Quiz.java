@@ -30,7 +30,7 @@ public class Quiz {
 			for (int j = 0; j < respostas.length; j++) {
 				System.out.println(respostas[j]);
 			}
-			System.out.println("Qual sua resposta? ");
+			System.out.println("Dgite a opção correspondente: ");
 			String resp = sc.nextLine();
 			
 			System.out.println("--------------------------------------------------------------");
