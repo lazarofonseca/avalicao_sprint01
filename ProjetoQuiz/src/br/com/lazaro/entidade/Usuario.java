@@ -3,8 +3,8 @@ package br.com.lazaro.entidade;
 public class Usuario {
 
 	private String nome;
-	private int acerto;
-	private int erro;
+	public static int acerto;
+	public static int erro;
 
 	public Usuario() {
 	}
@@ -21,20 +21,20 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public int getAcerto() {
+	public static int getAcerto() {
 		return acerto;
 	}
 
-	public void setAcerto(int acerto) {
-		this.acerto = acerto;
+	public static void setAcerto(int acerto) {
+		Usuario.acerto = acerto;
 	}
 
-	public int getErro() {
+	public static int getErro() {
 		return erro;
 	}
 
-	public void setErro(int erro) {
-		this.erro = erro;
+	public static void setErro(int erro) {
+		Usuario.erro = erro;
 	}
 
 }
