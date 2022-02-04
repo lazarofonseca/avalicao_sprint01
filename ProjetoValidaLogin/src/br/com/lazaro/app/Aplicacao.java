@@ -1,6 +1,5 @@
 package br.com.lazaro.app;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -15,10 +14,8 @@ public class Aplicacao {
 
 		Locale.setDefault(Locale.US);
 
-		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-
 		Scanner sc = new Scanner(System.in);
-		// List<Usuario> listaUsuarios = new ArrayList<Usuario>();
+
 		Login loginSenha = new Login();
 
 		Usuario usuario0 = new Usuario("lazaro", "123");
@@ -43,7 +40,6 @@ public class Aplicacao {
 
 			if (loginSenha.getUsuarios().get(i).getNome().equals(login)
 					&& loginSenha.getUsuarios().get(i).getSenha().equals(senha)) {
-				// System.out.println("Bem vindo!");
 				encontrou = true;
 				break;
 			} else {
@@ -58,8 +54,6 @@ public class Aplicacao {
 		int hora = cal.get(Calendar.HOUR_OF_DAY);
 		int minuto = cal.get(Calendar.MINUTE);
 
-		System.out.println(encontrou);
-
 		if (encontrou && hora > 6 && hora < 11 && minuto <= 59) {
 			System.out.println("Bom dia, você se logou com sucesso.");
 		} else if (encontrou && hora > 11 && hora < 17 && minuto <= 59) {
@@ -72,9 +66,8 @@ public class Aplicacao {
 			System.out.println("Usuário e/ou senha incorretos.");
 		}
 
-	
 		sc.close();
-		
+
 	}
 
 }
